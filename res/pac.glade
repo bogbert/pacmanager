@@ -6392,7 +6392,7 @@ Or(Global Variable): DISPLAY=&lt;GV:DISPLAY&gt;</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
                                         <property name="has_tooltip">True</property>
-                                        <property name="tooltip" translatable="yes">If cheked, the resulting connectino command (eg: ssh -L 10123:localhost:10456 -l user1 10.10.10.1) will be surrounded with double quotes ("), in order to provide some more compatibility to the "Prepend command"  (eg: gksudo requires the given command to be quoted)</property>
+                                        <property name="tooltip" translatable="yes">If checked, the resulting connection command (eg: ssh -L 10123:localhost:10456 -l user1 10.10.10.1) will be surrounded with double quotes ("), in order to provide some more compatibility to the "Prepend command"  (eg: gksudo requires the given command to be quoted)</property>
                                         <property name="use_action_appearance">False</property>
                                         <property name="draw_indicator">True</property>
                                       </widget>

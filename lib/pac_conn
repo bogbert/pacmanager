@@ -993,8 +993,12 @@ if ( defined $METHOD ) {
 }
 
 # Check for prepend commands
-$QUOTE_COMMAND and $connection_cmd = '"' . $connection_cmd . '"';
-$QUOTE_COMMAND and $connection_txt = '"' . $connection_cmd . '"';
+if ( $QUOTE_COMMAND ) {
+    $connection_cmd =~ s/([\\"])/\\$1/g;
+    $connection_cmd = '"' . $connection_cmd . '"';
+    $connection_txt =~ s/([\\"])/\\$1/g;
+    $connection_txt = '"' . $connection_cmd . '"';
+}
 $USE_PREPEND_COMMAND and $connection_cmd = $PREPEND_COMMAND . ' ' . $connection_cmd;
 $USE_PREPEND_COMMAND and $connection_txt = $PREPEND_COMMAND . ' ' . $connection_txt;
 
